@@ -11,6 +11,7 @@ const data = document.querySelectorAll(".info");
 infos.forEach(element => {
     element.addEventListener('keypress', () => {
         element.classList.add('info-success');
+        removeAlert()
     })
 });
 
@@ -28,10 +29,31 @@ btn.addEventListener('click', () => {
     
 })
 
-function displayAlert() {
-    document.getElementById("warning").style.display = "block"
 
+function displayAlert() {
+    const war = document.querySelectorAll(".warning");
+
+    war.forEach((number) => {
+        number.classList.add('warning-show')
+    })
 }
+
+function removeAlert() {
+    const war = document.querySelectorAll(".warning");
+
+    war.forEach((number) => {
+        number.classList.remove('warning-show');
+        number.classList.add('warning')
+    })
+}
+
+
+
+
+
+
+
+
 
 
 
