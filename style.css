@@ -1,59 +1,57 @@
+html {
+    height: 100%;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
-   background-image: linear-gradient(to bottom, #ca1ab8 , #3c87d184, rgb(81, 173, 234));
+    background-image: linear-gradient(to bottom, #ca1ab8 , #3c87d184, rgb(81, 173, 234));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
 }
 
 .main-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     display: flex;
+    
 }
 
 .left-container {
-    padding: 0px 40px 0px 40px;
-    margin: 20px;
-    color: white;
+    margin: 30px;
     width: 100vw;
-    height: 100vh;
+    color: white;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .right-container {
-    border-radius: 5px;
-    padding: 0px 40px 0px 40px;
-    margin: 20px;
+    margin: 30px;
     background-color: white;
-    width: 25vw;
-    height: 80vh;
+    min-height: 60vh;
+    width: 70%;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-.right-container input {
-    padding-left: 5px;
-    border-radius: 10px;
-    width: 300px;
-    height: 300px;
-    margin-top: 50px;
 }
 
 .right-container input:focus {
     outline: none;
 }
 
-.right-container .mensagem {
-    width: 300px;
-    height: 600px;
-}
-
 .info-danger {
-    border: 4px solid red;
+    border: 1px solid red;
 }
 
 .info-success {
-    border: 4px solid green;
+    border: 1px solid green;
 }
 
 .warning {
@@ -63,30 +61,104 @@ body {
 }
 
 .warning-show {
+    margin-top: 5px;
     color: red;
     width: 300px;
-    height: 20px;
     display: inline-block;
+   
 }
 
-.position {
-    width: 100vw;
+.info.mensagem {
+    height: 100px;
+}
+
+.form-container {
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.form-container input {
+    border-radius: 3px;
+    height: 30px;
+    width: 30vw;
+}
+
+.form-container input:first-child {
+    margin-top: 30px;
+}
+
+.form-container .info-mensagem {
+    height: 100px;
+}
+
 .confirmar-btn {
+    width: 100px;
+    height: 50px;
     border-style: none;
     background-color: #3CCC87;
     color: white;
     border-radius: 5px;
-    width: 300px;
-    height: 200px;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .warning-default {
     margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+
+    .main-container {
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+        .left-container {
+            width: 100vw;
+            height: 50%;
+        }
+
+        .left-container h1, p{
+            padding: 10px;
+        }
+
+        .form-container {
+            width: 100vw;
+            height: 50%;
+            display: flex;
+         }
+
+         .right-container {
+            margin: 0;
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+         }
+
+        
+
+    .form-container input {
+        width: 70vw;
+        height: 3vh;
+    }
+
+    .info.mensagem {
+        height: 7vh;
+    }
+
+    .confirmar-btn {
+        width: 80px;
+        height: 30px;
+        border-style: none;
+        background-color: #3CCC87;
+        color: white;
+        border-radius: 5px;
+    }
+
 }

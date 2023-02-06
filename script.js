@@ -1,37 +1,31 @@
 const btn = document.querySelector(".confirmar-btn");
 const infos = document.querySelectorAll(".info");
-const data = document.querySelectorAll(".info");
+const wrng = document.querySelectorAll('.warning');
 
 infos.forEach((element) => {
   element.addEventListener("keypress", () => {
     element.classList.add("info-success");
-    removeAlert();
+   removeAlert();
   });
 });
 
 btn.addEventListener("click", () => {
-  const sds = document.querySelectorAll(".info");
-  sds.forEach((number, index) => {
-    if (!number.value) {
-      number.classList.add("info-danger");
+  infos.forEach((item, index) => {
+    if (!item.value) {
+      item.classList.add("info-danger");
       displayAlert();
     }
   });
 });
 
 function displayAlert() {
-  const war = document.querySelectorAll(".warning");
-
-  war.forEach((number) => {
-    number.classList.add("warning-show");
+  wrng.forEach((item) => {
+    item.classList.add("warning-show");
   });
 }
 
 function removeAlert() {
-  const war = document.querySelectorAll(".warning");
-
-  war.forEach((number) => {
-    number.classList.remove("warning-show");
-    number.classList.add("warning");
+  wrng.forEach((item) => {
+    item.classList.remove("warning-show");
   });
 }
