@@ -1,37 +1,18 @@
-const btn = document.querySelector(".confirmar-btn");
-const infos = document.querySelectorAll(".info");
-const wrng = document.querySelectorAll('.warning');
-const tests = document.getElementById("info");
+const btnConfirm = document.querySelector(".confirmar-btn");
+const formFields = document.querySelectorAll(".info");
 
-
-infos.forEach((element) => {
-  element.addEventListener("keypress", () => {
-    element.classList.add("info-success");
-    toggleHidden();
+formFields.forEach((item) => {
+  item.addEventListener("keypress", () => {
+    item.nextElementSibling.style.visibility = "hidden"
+    item.style.border = "1px solid green"; 
   });
 });
 
-btn.addEventListener("click", () => {
-  infos.forEach((item, index) => {
+btnConfirm.addEventListener("click", () => {
+  formFields.forEach((item, ) => {
     if (item.value === '') {
-      item.parentElement.classList.add("info-danger");
-      toggleVis();
+      item.nextElementSibling.style.visibility = "visible"
+      item.style.border = "1px solid red"; 
     }
   });
 });
-
-
-function toggleVis() {
-  const wrng1 = document.querySelectorAll(".warning")
-    wrng1.forEach((item, index) => {
-    item.style.visibility = "visible";
-  })
-  
-}
-
-function toggleHidden() {
-  const wrng1 = document.querySelectorAll(".warning")
-  wrng1.forEach((item) => {
-    item.style.visibility = "hidden";
-  });
-}

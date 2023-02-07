@@ -21,7 +21,7 @@ body {
 }
 
 .left-container {
-    margin: 30px;
+    margin-left: 50px;
     width: 100vw;
     color: white;
     display: flex;
@@ -35,7 +35,7 @@ body {
     background-color: white;
     min-height: 60vh;
     width: 70%;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -46,25 +46,13 @@ body {
     outline: none;
 }
 
-.info-danger {
-    border: 1px solid red;
-}
-
-.info-success {
-    border: 1px solid green;
-}
-
 .warning {
-    margin-left: 44px;
-    text-align: left;
+    margin: 10px 0 10px 0px;
+    text-align: center;
     width: 100%;
     height: 20px;
     visibility: hidden;
-    color: red;
-}
-
-.info.mensagem {
-    height: 100px;
+    color: darkred;
 }
 
 .form-container {
@@ -76,7 +64,6 @@ body {
 }
 
 .form-container input {
-    border-radius: 3px;
     height: 30px;
     width: 30vw;
 }
@@ -90,7 +77,8 @@ body {
 }
 
 .confirmar-btn {
-    width: 100px;
+    margin-bottom: 30px;
+    width: 200px;
     height: 50px;
     border-style: none;
     background-color: #3CCC87;
@@ -102,17 +90,23 @@ body {
     margin-top: 10px;
 }
 
+.info.mensagem {
+    height: 20vh;
+}
+
 @media (max-width: 400px) {
 
     .main-container {
+        margin: 0;
         text-align: center;
         box-sizing: border-box;
         width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
     }
         .left-container {
+            margin: 0;
             width: 100vw;
             height: 50%;
         }
@@ -129,7 +123,7 @@ body {
 
          .right-container {
             margin: 0;
-            width: 100vw;
+            width: 90vw;
             height: 50vh;
             display: flex;
             justify-content: space-around;
@@ -147,7 +141,7 @@ body {
         height: 7vh;
     }
 
-    .confirmar-btn {
+    .confirmar-btn {   
         width: 80px;
         height: 30px;
         border-style: none;
