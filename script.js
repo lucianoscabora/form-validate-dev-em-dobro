@@ -1,31 +1,37 @@
 const btn = document.querySelector(".confirmar-btn");
 const infos = document.querySelectorAll(".info");
 const wrng = document.querySelectorAll('.warning');
+const tests = document.getElementById("info");
+
 
 infos.forEach((element) => {
   element.addEventListener("keypress", () => {
     element.classList.add("info-success");
-   removeAlert();
+    toggleHidden();
   });
 });
 
 btn.addEventListener("click", () => {
   infos.forEach((item, index) => {
-    if (!item.value) {
-      item.classList.add("info-danger");
-      displayAlert();
+    if (item.value === '') {
+      item.parentElement.classList.add("info-danger");
+      toggleVis();
     }
   });
 });
 
-function displayAlert() {
-  wrng.forEach((item) => {
-    item.classList.add("warning-show");
-  });
+
+function toggleVis() {
+  const wrng1 = document.querySelectorAll(".warning")
+    wrng1.forEach((item, index) => {
+    item.style.visibility = "visible";
+  })
+  
 }
 
-function removeAlert() {
-  wrng.forEach((item) => {
-    item.classList.remove("warning-show");
+function toggleHidden() {
+  const wrng1 = document.querySelectorAll(".warning")
+  wrng1.forEach((item) => {
+    item.style.visibility = "hidden";
   });
 }
