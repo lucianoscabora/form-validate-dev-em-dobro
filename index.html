@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="main-container">
@@ -52,17 +56,9 @@
             placeholder="Telefone *"
           />
           <span class="warning" id="">Este campo é obrigatório</span>
-
-          <input
-            type="text"
-            name=""
-            class="info mensagem"
-            id="info"
-            size="30"
-            value=""
-            placeholder="Mensagem *"
-          />
-          <span class="warning" id="">Este campo é obrigatório</span>
+          
+          <textarea name="info" id="info" class="info mensagem" placeholder="Write your message *" cols="30" rows="10"></textarea>
+          <span class="warning" id="">Este campo é obrigatório</span> 
 
           <button class="confirmar-btn" onsubmit="" id="confirmar-btn">
             Enviar

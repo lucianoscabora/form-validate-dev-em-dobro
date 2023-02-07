@@ -72,12 +72,23 @@ body {
     margin-top: 30px;
 }
 
-.form-container .info-mensagem {
+/* .form-container .info-mensagem {
     height: 100px;
+} */
+
+.info.mensagem {
+    width: 30vw;
+    height: 20vh;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.info.mensagem:focus {
+    outline: none;
 }
 
 .confirmar-btn {
-    margin-bottom: 30px;
+    margin: 30px 0 30px 0;
     width: 200px;
     height: 50px;
     border-style: none;
@@ -88,10 +99,6 @@ body {
 
 .warning-default {
     margin-top: 10px;
-}
-
-.info.mensagem {
-    height: 20vh;
 }
 
 @media (max-width: 400px) {
@@ -106,33 +113,23 @@ body {
         flex-direction: column;
     }
         .left-container {
-            margin: 0;
+            margin: 50px 0 0 0;
             width: 100vw;
             height: 100%;
-            margin-bottom: 50px;
         }
 
         .left-container h1, p{
             padding: 10px;
         }
 
-        .form-container {
-            width: 100vw;
-            display: flex;
-            height: 50%;
-         }
-
          .right-container {
-            margin: 0;
-            width: 90vw;
-            height: 50%;
+            width: 100vw;
+            height: 10vh;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin-bottom: 20px;
+            
          }
-
-        
 
     .form-container input {
         width: 70vw;
@@ -140,12 +137,14 @@ body {
     }
 
     .info.mensagem {
-        height: 7vh;
+        width: 70vw;
+        height: 15vh;
     }
 
-    .confirmar-btn {   
-        width: 130px;
-        height: 30px;
+    .confirmar-btn {
+        margin: 0 0 20px 0;   
+        width: 60vw;
+        height: 70px;
         border-style: none;
         background-color: #3CCC87;
         color: white;
