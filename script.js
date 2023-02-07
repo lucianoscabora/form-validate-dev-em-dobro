@@ -4,15 +4,15 @@ const formFields = document.querySelectorAll(".info");
 formFields.forEach((item) => {
   item.addEventListener("keypress", () => {
     item.nextElementSibling.style.visibility = "hidden"
-    item.style.border = "1px solid green"; 
+    item.style.border = "2px solid green"; 
   });
 });
 
 btnConfirm.addEventListener("click", () => {
-  formFields.forEach((item, ) => {
+  formFields.forEach((item) => {
     if (item.value === '') {
       item.nextElementSibling.style.visibility = "visible"
-      item.style.border = "1px solid red"; 
+      item.style.border = "2px solid red"; 
     }
   });
 });
